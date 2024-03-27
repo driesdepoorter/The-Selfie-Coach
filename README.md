@@ -1,5 +1,5 @@
 
-# The Insta Coach
+# The Selfie Coach
 Get instant selfie coaching from Kylie J.
 
 Video: 
