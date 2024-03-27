@@ -2,6 +2,9 @@
 # The Insta Coach
 Get instant selfie coaching from Kylie J.
 
+Video: 
+[![Video Dries Depoorter](https://img.youtube.com/vi/UjiFmRX6A9k/0.jpg)](https://www.youtube.com/watch?v=UjiFmRX6A9k)
+
 Check my other projects, visit [Dries Depoorter](https://driesdepoorter.be).
 I'm an artist combining art and technology. Follow me also on [Instagram](https://instagram.com/driesdepoorter) and [X](https://twitter.com/driesdepoorter).
 
