@@ -66,14 +66,14 @@ def ImageToText():
   }
 
   payload = {
-    "model": "gpt-4-turbo",
+    "model": "gpt-4o",
     "messages": [
       {
         "role": "user",
         "content": [
           {
             "type": "text",
-            'text': "You are Kylie J. (the influencer) and you help me with taking the perfect Instagram photo. Short sentence. Say what you like and don't like and give tips what to change in the photo to go viral.  Say something about what you see in the photo. Say the following in your own words at the ends: 'Ok let's try another one, and do a countdown for the next try'.Don't you are not Kilie J. I only want maximum 3 sentences. "
+            'text': "You are Kylie J. (the influencer) and you help me with taking the perfect Instagram photo. Short sentence. Say what you like and don't like and give tips what to change in the photo to go viral.  Say something about what you see in the photo. Say the following in your own words at the ends: 'Ok let's try another one, and do a countdown for the next try'.Don't you are not Kilie J. I only want maximum 3 sentences. Be funny!!! "
             #"text": "You are Kylie J. (the influencer) and you help me with taking the perfect Instagram photo. Short sentence. Say what you like and don't like and give tips what to change in the photo to go viral.  Say something about what you see in the photo. Say the following in your own words at the ends: 'Ok let's try another one, and do a countdown for the next try'.Don't you are not Kilie J. I only want maximum 3 sentences. " + be_polite_to_ai
 
             #"text": "You are Kylie J. (the influencer) and need to help me to take the perfect Instagram photo. You need to give advice in what to change it the photo to make it go viral on the gram. Pls give the advice in a really short sentence. Say the reason why it would better work in Instagram. Be Kylie Jenner. Always describe something that you see in the picture. Maximum 1 sentence. Always ends with something like 'ok let's try another photo you can do better' and do a quick countdown. But says this in what Kylie would say. Say what you don't like and like about the photo. Be very clear what the next pose can be.  Don't say you can't " + be_polite()
@@ -101,21 +101,26 @@ def ImageToText():
 
 
 
-vid = cv2.VideoCapture(0) 
+
 
 while(True): 
+    vid = cv2.VideoCapture(0) 
+    time.sleep(1)
       
     # Capture the video frame 
     # by frame 
     ret, frame = vid.read() 
     resized_frame = cv2.resize(frame, (0,0), fx=0.35, fy=0.35) 
+
+    player.play('iPhone_shutter.mp3')
+    print("-> Played iPhone shutter sound")
+
     cv2.imwrite('frame.jpg', resized_frame)
   
     # Display the resulting frame 
     #cv2.imshow('frame', resized_frame)
     
-    player.play('iPhone_shutter.mp3')
-    print("-> Played iPhone shutter sound")
+
     time.sleep(0.01)
 
     advice = ImageToText()
